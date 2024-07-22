@@ -6,25 +6,14 @@
  available at URL.
 
  ## Defining the Task and Knowledge Graph:
- a) The NLP task our fine-tuned LLM will consider is the classification of a textual
- description of any human disease into its scientific disease name.
- b) The HDO (Human Disease Ontology) knowledge graph has a single-hierarchy
- nature and contains information for any disease, such as its definition (the
- description), the synonyms (other frequently used names), and some unique
- scientific codes given to them, and the data is available in formats such as .owl,
+ a) The NLP task our fine-tuned LLM will consider is the classification of a textual description of any human disease into its scientific disease name.<br>
+ b) The HDO (Human Disease Ontology) knowledge graph has a single-hierarchy nature and contains information for any disease, such as its definition (the description), the synonyms (other frequently used names), and some unique scientific codes given to them, and the data is available in formats such as .owl,
  .xml, .json etc.
 
  ## Preprocessing the Knowledge Graph Data
- a) Data Formation: The information such as disease definition, synonyms and
- scientific codes are combined together to form an attribute “text_sequence” and
- take the disease names to form the attribute “label”, and a dataframe is created.
- b) Data Augmentation: Since the data is constructed from a knowledge graph, it
- contains no duplicates and hence all the 14,081 entries are unique. So the data
- is augmented, where new samples (~5000) are introduced to allow for a diverse
- set of samples, and the data is shuffled to account for minimal losses during
- training of the LLM.
- c) Data Cleaning: The attribute “text_sequence” is cleaned with the removal of
- stopwords, punctuations along with the lowercasing of the text.
+ a) Data Formation: The information such as disease definition, synonyms and scientific codes are combined together to form an attribute “text_sequence” and take the disease names to form the attribute “label”, and a dataframe is created.<br>
+ b) Data Augmentation: Since the data is constructed from a knowledge graph, it contains no duplicates and hence all the 14,081 entries are unique. So the data is augmented, where new samples (~5000) are introduced to allow for a diverse set of samples, and the data is shuffled to account for minimal losses during training of the LLM.<br>
+ c) Data Cleaning: The attribute “text_sequence” is cleaned with the removal of stopwords, punctuations along with the lowercasing of the text.<br>
 The final prepared data is represented as follows:<br>
 ![prepared_data](https://github.com/rishav197/Fine-Tuning-LLMs-with-Knowledge-Graphs/blob/main/images/img1.jpg)
 
