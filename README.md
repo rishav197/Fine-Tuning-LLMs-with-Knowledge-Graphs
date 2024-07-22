@@ -30,12 +30,9 @@ The final prepared data is represented as follows:<br>
 
 
  ## Model Selection and Training Preparations
- a) Initializing two models BioBERT and BERT (base-uncased) tokenizer and
- model, pretrained on a large corpus of English Data.
- b) The “text_sequences” and “label” attributes are tokenized and appropriate
- padding with attention masks are applied to ensure consistency in encodings.
- c) The dataset is split into a 85:15 ratio of Train-Test, and appropriate data
- loaders are initialized for the fine-tuning process.
+ a) Initializing two models BioBERT and BERT (base-uncased) tokenizer and model, pretrained on a large corpus of English Data.<br>
+ b) The “text_sequences” and “label” attributes are tokenized and appropriate padding with attention masks are applied to ensure consistency in encodings.<br>
+ c) The dataset is split into a 85:15 ratio of Train-Test, and appropriate data loaders are initialized for the fine-tuning process.<br>
  d) The parameters selected for the training are:
  ○ Num_epochs = 10
  ○ Learning Rate = 2e- 5
