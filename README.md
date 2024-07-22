@@ -44,4 +44,3 @@ The final prepared data is represented as follows:<br>
  terminology, rather than more general text based, which is the base for the BERT
  model. In both the cases, the fine-tuning of LLMs on knowledge graphs proved to be
  beneficial.
-
