@@ -22,10 +22,10 @@ The final prepared data is represented as follows:<br>
  a) Initializing two models BioBERT and BERT (base-uncased) tokenizer and model, pretrained on a large corpus of English Data.<br>
  b) The “text_sequences” and “label” attributes are tokenized and appropriate padding with attention masks are applied to ensure consistency in encodings.<br>
  c) The dataset is split into a 85:15 ratio of Train-Test, and appropriate data loaders are initialized for the fine-tuning process.<br>
- d) The parameters selected for the training are:
- ○ Num_epochs = 10
- ○ Learning Rate = 2e- 5
- ○ Batch Size = 16
+ d) The parameters selected for the training are:<br>
+ ○ Num_epochs = 10<br>
+ ○ Learning Rate = 2e- 5<br>
+ ○ Batch Size = 16<br>
  ○ Optimizer = AdamW
 
 
@@ -45,4 +45,3 @@ The final prepared data is represented as follows:<br>
  model. In both the cases, the fine-tuning of LLMs on knowledge graphs proved to be
  beneficial.
 
-## Resources:
