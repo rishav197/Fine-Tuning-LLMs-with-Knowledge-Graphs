@@ -25,27 +25,38 @@
  training of the LLM.
  c) Data Cleaning: The attribute “text_sequence” is cleaned with the removal of
  stopwords, punctuations along with the lowercasing of the text.
-The final prepared data is represented as follows:
+The final prepared data is represented as follows:<br>
 ![prepared_data](https://github.com/rishav197/Fine-Tuning-LLMs-with-Knowledge-Graphs/blob/main/images/img1.jpg)
 
 
  ## Model Selection and Training Preparations
- a) Initializing the BERT (base-uncased) tokenizer and model, pretrained on a
- large corpus of English Data.
+ a) Initializing two models BioBERT and BERT (base-uncased) tokenizer and
+ model, pretrained on a large corpus of English Data.
  b) The “text_sequences” and “label” attributes are tokenized and appropriate
  padding with attention masks are applied to ensure consistency in encodings.
- c) The dataset is split into a 3:1 ratio of Train-Val, and appropriate data loaders
- are initialized for the fine-tuning process.
+ c) The dataset is split into a 85:15 ratio of Train-Test, and appropriate data
+ loaders are initialized for the fine-tuning process.
  d) The parameters selected for the training are:
  ○ Num_epochs = 10
  ○ Learning Rate = 2e- 5
  ○ Batch Size = 16
  ○ Optimizer = AdamW
 
- ## Fine-Tuning and Results
- The model is trained utilizing the GPU and the training losses seem to decrease
- while the validation losses seem to increase for some epochs and then decrease
- again (after epoch 8) as can be seen below, which indicates that the training
- needs to be more efficient, which could be either done with the selection of best
- parameters through hyperparameter tuning, or with the appropriate modifications
- to the data, since it contains very high number (more than 80%) of unique labels.
+
+
+## Fine-Tuning Results
+ The models are trained utilizing the GPU and the training losses seem to
+ decrease for both the models.
+ The final model testing results are as follows:<br>
+![Model_results](https://github.com/rishav197/Fine-Tuning-LLMs-with-Knowledge-Graphs/blob/main/images/img2.jpg)
+
+
+## Conclusion:
+ While the accuracy for both models are comparable and possess very similar
+ results, BioBERT still outperforms BERT, the reason being that it was designed for the
+ biomedical domain purposes, and pre trained on tasks specific to the biological
+ terminology, rather than more general text based, which is the base for the BERT
+ model. In both the cases, the fine-tuning of LLMs on knowledge graphs proved to be
+ beneficial.
+
+## Resources:
