@@ -26,6 +26,8 @@
  c) Data Cleaning: The attribute “text_sequence” is cleaned with the removal of
  stopwords, punctuations along with the lowercasing of the text.
 The final prepared data is represented as follows:
+![prepared_data](https://github.com/rishav197/Fine-Tuning-LLMs-with-Knowledge-Graphs/blob/main/images/img1.jpg)
+
 
  ## Model Selection and Training Preparations
  a) Initializing the BERT (base-uncased) tokenizer and model, pretrained on a
@@ -39,7 +41,7 @@ The final prepared data is represented as follows:
  ○ Learning Rate = 2e- 5
  ○ Batch Size = 16
  ○ Optimizer = AdamW
- 
+
  ## Fine-Tuning and Results
  The model is trained utilizing the GPU and the training losses seem to decrease
  while the validation losses seem to increase for some epochs and then decrease
